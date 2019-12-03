@@ -9,7 +9,6 @@ import (
 
 func New() *gin.Engine{
 	r := gin.Default()
-	// fmt.Println(reflect.TypeOf(r))
 	rg := r.Group("/api")
 	{
 		rg.POST("/", api.Create)

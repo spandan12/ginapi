@@ -35,9 +35,6 @@ func getClient() (*mongo.Client, context.Context){
 func InsertOne(filter interface{}){
 	client,ctx := getClient()
 	collection := client.Database("signoi").Collection("users")
-
-	// user := User{Name, Age, Address}
-
 	insertResult, err := collection.InsertOne(ctx, filter)
 
 	if err != nil {
